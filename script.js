@@ -107,6 +107,55 @@
     }, { passive: true });
   }
 
+
+  /* ── ESTÁNDAR 15-09-2026: movimiento extra ──────────────────────
+     Va igual en las tres cafeterías. Todo dentro de try/catch: si algo
+     falla, la página se ve igual, sólo sin la animación. */
+  try {
+    /* Reveal escalonado: se numera cada hijo para que entren en cascada
+       en vez de todos de golpe. */
+    document.querySelectorAll('.stagger').forEach(function (grupo) {
+      Array.prototype.forEach.call(grupo.children, function (hijo, i) {
+        hijo.style.setProperty('--i', i);
+      });
+    });
+
+    /* Los números de las cifras suben hasta su valor al aparecer.
+       Se respeta el texto original (con puntos, comas, $, "mil"), así que
+       no hay riesgo de que muestre un número distinto al real. */
+    var cifras = document.querySelectorAll('[data-contar]');
+    if (cifras.length && 'IntersectionObserver' in window &&
+        !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      var obsN = new IntersectionObserver(function (entradas) {
+        entradas.forEach(function (en) {
+          if (!en.isIntersecting) return;
+          obsN.unobserve(en.target);
+          var el = en.target;
+          var texto = el.textContent;
+          var num = parseFloat(texto.replace(/\./g, '').replace(',', '.').replace(/[^\d.]/g, ''));
+          if (!isFinite(num) || num <= 0) return;
+          var t0 = null, dur = 900;
+          function paso(t) {
+            if (t0 === null) t0 = t;
+            var p = Math.min((t - t0) / dur, 1);
+            var e = 1 - Math.pow(1 - p, 3);          // easing suave al final
+            if (p < 1) {
+              var v = num * e;
+              el.textContent = texto.indexOf(',') > -1
+                ? v.toFixed(1).replace('.', ',')
+                : Math.round(v).toLocaleString('es-CL');
+              requestAnimationFrame(paso);
+            } else {
+              el.textContent = texto;               // se restaura el original
+            }
+          }
+          requestAnimationFrame(paso);
+        });
+      }, { threshold: 0.6 });
+      cifras.forEach(function (c) { obsN.observe(c); });
+    }
+  } catch (e) { /* si falla, la página sigue igual */ }
+
   /* ── 8. Abrir en la pestaña del hash, si viene una válida ── */
   var hash = (location.hash || '').replace('#', '');
   if (hash && document.querySelector('[data-tab-panel="' + hash + '"]')) goToTab(hash);

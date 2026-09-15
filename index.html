@@ -119,7 +119,7 @@
   </div>
 
   <div class="wrap">
-    <div class="tri reveal">
+    <div class="tri reveal stagger">
       <article class="tri-card">
         <h3>Sándwiches como corresponde</h3>
         <p>Churrasco italiano, chacarero, lomo italiano y mechada. Los mismos
@@ -196,7 +196,7 @@
       </div>
     </div>
 
-    <div class="gal reveal">
+    <div class="gal reveal stagger">
       <figure><img src="fotos/mesa-servida.jpg" alt="Mesa servida con churrasco, café y sopaipilla en Río Deva" loading="lazy" decoding="async"></figure>
       <figure><img src="fotos/chacarero.jpg" alt="Chacarero servido en plato sobre mesa de madera" loading="lazy" decoding="async"></figure>
       <figure><img src="fotos/italiano.jpg" alt="Sándwich italiano en la vitrina junto a un jugo" loading="lazy" decoding="async"></figure>
@@ -226,8 +226,13 @@
       por 23 clientes. Al pedir conviene confirmar en el local.
     </div>
 
-    <h3 class="cat reveal">Sándwiches</h3>
-    <div class="menu reveal">
+        <section class="carta-bloque reveal">
+      <header class="carta-bloque-head">
+        <h3>Sándwiches</h3>
+        <span class="carta-bloque-n">4 opciones</span>
+      </header>
+
+    <div class="menu reveal stagger">
       <article class="menu-item">
         <img src="fotos/churrasco.jpg" alt="Churrasco italiano en pan frica" loading="lazy" decoding="async">
         <div><h4>Churrasco Italiano</h4><p>Uno de los tres destacados de la carta en su ficha de Google.</p></div>
@@ -248,9 +253,14 @@
         <span class="price">Consultar</span>
       </article>
     </div>
+    </section>
+    <section class="carta-bloque reveal">
+      <header class="carta-bloque-head">
+        <h3>Fuente de soda</h3>
+        <span class="carta-bloque-n">3 opciones</span>
+      </header>
 
-    <h3 class="cat reveal">Fuente de soda</h3>
-    <div class="menu reveal">
+    <div class="menu reveal stagger">
       <article class="menu-item">
         <img src="fotos/hero-completo.jpg" alt="Completo con ketchup y mostaza" loading="lazy" decoding="async">
         <div><h4>Completos</h4><p>Lo más nombrado en sus reseñas, de lejos.</p></div>
@@ -265,9 +275,14 @@
         <span class="price">Consultar</span>
       </article>
     </div>
+    </section>
+    <section class="carta-bloque reveal">
+      <header class="carta-bloque-head">
+        <h3>Panadería y pastelería</h3>
+        <span class="carta-bloque-n">3 opciones</span>
+      </header>
 
-    <h3 class="cat reveal">Panadería y pastelería</h3>
-    <div class="menu reveal">
+    <div class="menu reveal stagger">
       <article class="menu-item">
         <div><h4>Panadería</h4><p>Sección propia dentro del local.</p></div>
         <span class="price">Consultar</span>
@@ -281,9 +296,14 @@
         <span class="price">Consultar</span>
       </article>
     </div>
+    </section>
+    <section class="carta-bloque reveal">
+      <header class="carta-bloque-head">
+        <h3>Para tomar</h3>
+        <span class="carta-bloque-n">3 opciones</span>
+      </header>
 
-    <h3 class="cat reveal">Para tomar</h3>
-    <div class="menu reveal">
+    <div class="menu reveal stagger">
       <article class="menu-item">
         <div><h4>Café</h4><p>Se sirve en taza, no en vaso de cartón.</p></div>
         <span class="price">Consultar</span>
@@ -298,7 +318,7 @@
         <span class="price">Consultar</span>
       </article>
     </div>
-
+    </section>
     <!--
       ⚠️ PLACEHOLDER MARCADO — FALTA LA CARTA CON PRECIOS.
       En la foto `fotos/salon.jpg` hay un cartel de promoción que dice
@@ -320,7 +340,7 @@
       <p class="sec-lead">Reseñas reales, copiadas tal cual de su ficha de Google Maps.</p>
     </header>
 
-    <div class="revs reveal">
+    <div class="revs reveal stagger">
       <blockquote class="rev">
         <p class="stars" aria-label="5 de 5 estrellas">★★★★★</p>
         <p>Los completos mas buenos de Rancagua. Clásico.</p>
@@ -339,11 +359,6 @@
         <footer><b>Daniela Zuñiga</b><span>Local Guide · 22 reseñas</span></footer>
       </blockquote>
 
-      <blockquote class="rev">
-        <p class="stars" aria-label="5 de 5 estrellas">★★★★★</p>
-        <p>Muy ricos sándwich, una mayonesa casera con una consistencia y sabor espectacular. Muy amable el personal y lugar con buena ambientación.</p>
-        <footer><b>Camilo A.</b><span>Local Guide · 348 reseñas</span></footer>
-      </blockquote>
     </div>
 
     <div class="rev-cta reveal">
@@ -364,15 +379,36 @@
       </p>
     </header>
 
-    <div class="redes reveal">
-      <a class="red red-tel" href="tel:+56953847770">
-        <span class="red-ico" aria-hidden="true">☎</span>
-        <span class="red-txt"><b>+56 9 5384 7770</b><em>Teléfono publicado en Google Maps</em></span>
+    <div class="redes">
+      <a class="red-card reveal" href="tel:+56953847770">
+        <span class="red-card-head">
+          <span class="red-logo red-logo-tel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg></span>
+          <span class="red-card-txt">
+            <b>+56 9 5384 7770</b>
+            <em>Teléfono publicado en Google Maps</em>
+          </span>
+          <span class="red-card-cta">Llamar →</span>
+        </span>
+        <p class="red-pie">Es el único canal de contacto que tienen publicado.</p>
       </a>
-      <a class="red red-map" href="https://www.google.com/maps/search/?api=1&query=R%C3%ADo%20Deva&query_place_id=ChIJSQKjqBdDY5YRmGjGTnlSAqU" target="_blank" rel="noopener">
-        <span class="red-ico" aria-hidden="true">◎</span>
-        <span class="red-txt"><b>Ficha en Google Maps</b><em>4,4 ★ · 393 reseñas</em></span>
-      </a>
+
+      <article class="red-card reveal">
+        <a class="red-card-head" href="https://www.google.com/maps/search/?api=1&query=R%C3%ADo%20Deva&query_place_id=ChIJSQKjqBdDY5YRmGjGTnlSAqU" target="_blank" rel="noopener">
+          <span class="red-logo red-logo-map"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C7.31 0 3.5 3.81 3.5 8.5c0 6.38 8.5 15.5 8.5 15.5s8.5-9.12 8.5-15.5C20.5 3.81 16.69 0 12 0zm0 11.6a3.1 3.1 0 110-6.2 3.1 3.1 0 010 6.2z"/></svg></span>
+          <span class="red-card-txt">
+            <b>Ficha en Google Maps</b>
+            <em>4,4 ★ · 393 reseñas</em>
+          </span>
+          <span class="red-card-cta">Abrir →</span>
+        </a>
+        <a class="red-grid" href="https://www.google.com/maps/search/?api=1&query=R%C3%ADo%20Deva&query_place_id=ChIJSQKjqBdDY5YRmGjGTnlSAqU" target="_blank" rel="noopener"
+           data-cta="Ver la ficha" aria-label="Abrir la ficha de Río Deva en Google Maps">
+          <figure><img src="fotos/registradoras.jpg" alt="Cajas registradoras antiguas del salón" loading="lazy" decoding="async"></figure>
+          <figure><img src="fotos/hero-completo.jpg" alt="Completo y café servidos en el mesón" loading="lazy" decoding="async"></figure>
+          <figure><img src="fotos/lomito.jpg" alt="Lomito con huevo y queso sobre mantel rojo" loading="lazy" decoding="async"></figure>
+        </a>
+        <p class="red-pie">Fotos del local publicadas en su propia ficha.</p>
+      </article>
     </div>
 
     <!--
@@ -430,7 +466,14 @@
 
         <div class="vblock">
           <h3>Teléfono</h3>
-          <p><a href="tel:+56953847770">+56 9 5384 7770</a></p>
+          <a class="vtel" href="tel:+56953847770">
+            <span class="vtel-ico" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg></span>
+            <span class="vtel-txt">
+              <b>+56 9 5384 7770</b>
+              <em>Publicado en su ficha de Google</em>
+            </span>
+            <span class="vtel-flecha" aria-hidden="true">→</span>
+          </a>
           <!--
             ⚠️ WhatsApp NO confirmado. Es un número móvil, pero no se
             comprobó que tenga WhatsApp (wa.me/c/56953847770). Mientras no
@@ -441,7 +484,11 @@
 
         <div class="vblock">
           <h3>Cómo se puede pedir</h3>
-          <p>Consumo en el lugar · Para llevar · Entrega a domicilio</p>
+          <ul class="vpedir">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v2H3V5zm2 4h14l-1 5h-4v6h-2v-6H6L5 9zm-1 12h16v2H4v-2z"/></svg> Consumo en el lugar</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7V6a6 6 0 1112 0v1h3v14a2 2 0 01-2 2H5a2 2 0 01-2-2V7h3zm2 0h8V6a4 4 0 10-8 0v1z"/></svg> Para llevar</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 15a3 3 0 100 6 3 3 0 000-6zM5 15a3 3 0 100 6 3 3 0 000-6zm12.5-9H15V4h4l2 5h1v2h-2.2A5 5 0 0119 21v-2a3 3 0 00.6-5.94L18.4 10H11l-2.2 3H10a5 5 0 11-5 5H3a7 7 0 007-7h.5l3-4h-3V5h5l1 3z"/></svg> Entrega a domicilio</li>
+          </ul>
           <p class="sub">
             Servicios declarados en su ficha de Google.
             <!--
@@ -450,12 +497,6 @@
               No poner ningún botón de delivery hasta confirmarlo.
             -->
           </p>
-        </div>
-
-        <div class="vblock">
-          <h3>Gasto por persona</h3>
-          <p>$5.000 – $10.000</p>
-          <p class="sub">Estimación de Google, informada por 23 clientes.</p>
         </div>
 
         <div class="vblock vblock-cta">
@@ -488,10 +529,15 @@
 </main>
 
 <!-- ══ Botones flotantes ══ -->
-<div class="float" id="float">
-  <a class="fab fab-tel" href="tel:+56953847770" aria-label="Llamar a Río Deva"><span aria-hidden="true">☎</span></a>
-  <a class="fab fab-map" href="https://www.google.com/maps/dir/?api=1&destination=R%C3%ADo%20Deva%20Brasil%201114%20Rancagua&destination_place_id=ChIJSQKjqBdDY5YRmGjGTnlSAqU" target="_blank" rel="noopener" aria-label="Cómo llegar a Río Deva"><span aria-hidden="true">➤</span></a>
-  <button class="fab fab-top" id="toTop" aria-label="Volver arriba"><span aria-hidden="true">↑</span></button>
+<!-- Flotantes. Derecha = contacto directo. La izquierda queda libre para
+     el delivery, pero Río Deva no tiene app confirmada (Maps dice "entrega a
+     domicilio" sin decir por cuál), así que no se pone ninguno.
+     ⚠️ WhatsApp SIN confirmar: va tel:, nunca wa.me, hasta comprobarlo. -->
+<div class="float float-right" id="float">
+  <a class="fab fab-tel" href="tel:+56953847770" data-label="Llamar al local"
+     aria-label="Llamar a Río Deva" style="background:var(--azul)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg></a>
+  <button class="fab fab-top" id="toTop" data-label="Volver arriba" aria-label="Volver arriba"
+    style="background:var(--caoba);color:#fff"><span aria-hidden="true">↑</span></button>
 </div>
 
 <!-- ══ Pie ══ -->
