@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Río Deva — Fuente de soda y sanguchería en Rancagua</title>
+<meta name="description" content="Río Deva, Brasil 1114, Rancagua. Completos, lomitos, churrascos y chacareros de toda la vida, con panadería y pastelería propia. 4,4 ★ con 393 reseñas en Google.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1C3A4F">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231C3A4F'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-family='Georgia,serif' font-size='36' font-weight='bold' fill='%23F0E4CC'%3ERD%3C/text%3E%3C/svg%3E">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CL">
+<meta property="og:site_name" content="Río Deva">
+<meta property="og:title" content="Río Deva — un clásico de Rancagua desde Brasil 1114">
+<meta property="og:description" content="Completos, lomitos y churrascos de toda la vida, con panadería y pastelería propia. 4,4 ★ con 393 reseñas.">
+<meta property="og:url" content="https://mmedinacode.github.io/Rio-Deva-Web/">
+<meta property="og:image" content="https://mmedinacode.github.io/Rio-Deva-Web/fotos/hero-completo.jpg">
+<meta property="og:image:alt" content="Un completo y una taza de café en el mesón de Río Deva, Rancagua">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400&family=Public+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Alegreya+Sans+SC:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ══ Pantalla de carga (se va en menos de 1s) ══ -->
+<div id="loader" class="loader" aria-hidden="true">
+  <div class="loader-mark">
+    <span class="loader-r">R</span><span class="loader-d">D</span>
+  </div>
+  <p class="loader-txt">Río Deva · Rancagua</p>
+</div>
+
+<a class="skip" href="#main">Saltar al contenido</a>
+
+<!-- ══ Cabecera ══ -->
+<header class="head" id="head">
+  <div class="head-in">
+    <a class="brand" href="#inicio" data-tab="inicio" aria-label="Río Deva, ir al inicio">
+      <span class="brand-mark" aria-hidden="true">RD</span>
+      <span class="brand-txt">
+        <strong>Río Deva</strong>
+        <em>Fuente de soda · Rancagua</em>
+      </span>
+    </a>
+
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="nav" aria-label="Secciones">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#inicio"    data-tab="inicio"    class="on">Inicio</a></li>
+        <li><a href="#nosotros"  data-tab="nosotros">Nosotros</a></li>
+        <li><a href="#carta"     data-tab="carta">Carta</a></li>
+        <li><a href="#resenas"   data-tab="resenas">Reseñas</a></li>
+        <li><a href="#redes"     data-tab="redes">Redes</a></li>
+        <li><a href="#visitanos" data-tab="visitanos">Visítanos</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ══════════════ INICIO ══════════════ -->
+<section class="tab-panel on" data-tab-panel="inicio" id="inicio">
+
+  <div class="hero">
+    <div class="hero-txt">
+      <p class="eyebrow"><span class="rule"></span> Brasil 1114 · Rancagua</p>
+      <h1>Los completos<br><em>de toda la vida.</em></h1>
+      <p class="hero-lead">
+        Una fuente de soda como las de antes, en pleno centro de Rancagua:
+        pan recién salido, mayonesa hecha en casa y un mesón de madera con
+        las mismas cajas registradoras de bronce de hace décadas.
+      </p>
+
+      <div class="hero-stats">
+        <div><b>4,4</b><span>★ en Google</span></div>
+        <div><b>393</b><span>reseñas</span></div>
+        <div><b>6</b><span>días a la semana</span></div>
+      </div>
+
+      <div class="hero-cta">
+        <a class="btn btn-solid" href="tel:+56953847770">Llamar al local</a>
+        <a class="btn btn-ghost" href="#carta" data-tab="carta">Ver la carta</a>
+      </div>
+
+      <p class="hero-open">
+        <span class="dot" id="statusDot" aria-hidden="true"></span>
+        <span data-horario-estado>Lunes a sábado de 09:00 a 19:30</span>
+      </p>
+    </div>
+
+    <div class="hero-img">
+      <img src="fotos/hero-completo.jpg" alt="Un completo y una taza de café servidos en una mesa de Río Deva" fetchpriority="high" decoding="async" width="1600" height="1200">
+      <figcaption class="hero-cap">Completo y café, en el mesón de Brasil 1114</figcaption>
+    </div>
+  </div>
+
+  <!-- tira de especialidades -->
+  <div class="strip">
+    <div class="strip-in">
+      <span>Completos</span><i>·</i>
+      <span>Lomitos</span><i>·</i>
+      <span>Churrascos</span><i>·</i>
+      <span>Chacareros</span><i>·</i>
+      <span>Mechada</span><i>·</i>
+      <span>Panadería</span><i>·</i>
+      <span>Pastelería</span><i>·</i>
+      <span>Helados</span><i>·</i>
+      <span>Schop</span><i>·</i>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="tri reveal">
+      <article class="tri-card">
+        <h3>Sándwiches como corresponde</h3>
+        <p>Churrasco italiano, chacarero, lomo italiano y mechada. Los mismos
+           que la gente de Rancagua viene a buscar hace años.</p>
+        <a href="#carta" data-tab="carta" class="lnk">Ver la carta →</a>
+      </article>
+      <article class="tri-card">
+        <h3>Panadería y pastelería propia</h3>
+        <p>Además de la fuente de soda, acá mismo hay sección de panadería y
+           pastelería —como lo cuentan los propios clientes en sus reseñas.</p>
+        <a href="#resenas" data-tab="resenas" class="lnk">Leer reseñas →</a>
+      </article>
+      <article class="tri-card">
+        <h3>Para llevar y a domicilio</h3>
+        <p>Se puede comer en el local, pedir para llevar o recibirlo en tu
+           casa. Lo confirma la propia ficha del local en Google.</p>
+        <a href="#visitanos" data-tab="visitanos" class="lnk">Cómo llegar →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ NOSOTROS ══════════════ -->
+<section class="tab-panel" data-tab-panel="nosotros" id="nosotros">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="eyebrow"><span class="rule"></span> Nosotros</p>
+      <h2>Tradición en calidad</h2>
+      <p class="sec-lead">
+        Esas tres palabras están pintadas en el mural del local. Es, bastante
+        literalmente, lo que Río Deva viene haciendo en Brasil 1114.
+      </p>
+    </header>
+
+    <div class="split reveal">
+      <figure class="split-img">
+        <img src="fotos/registradoras.jpg" alt="Colección de cajas registradoras y balanzas antiguas sobre un mueble de madera en Río Deva" loading="lazy" decoding="async">
+        <figcaption>Las registradoras y balanzas antiguas del salón</figcaption>
+      </figure>
+      <div class="split-txt">
+        <h3>Un museo chico que además da de comer</h3>
+        <p>
+          Lo primero que llama la atención al entrar no es la carta: es la
+          fila de <strong>cajas registradoras de bronce y balanzas antiguas</strong>
+          sobre el mueble de madera, a la vista de todos. No es decoración
+          comprada por metro — son piezas que quedaron.
+        </p>
+        <p>
+          El resto acompaña: mostrador de madera oscura con espejo, sillas de
+          madera, baldosa en el piso y una silla alta para las guaguas. Un
+          local que se ve exactamente como lo que es.
+        </p>
+      </div>
+    </div>
+
+    <div class="split split-rev reveal">
+      <figure class="split-img">
+        <img src="fotos/salon.jpg" alt="Salón de Río Deva con mostrador de madera antiguo y mesas" loading="lazy" decoding="async">
+        <figcaption>El salón y el mostrador de siempre</figcaption>
+      </figure>
+      <div class="split-txt">
+        <h3>Lo que dice la gente que viene</h3>
+        <p>
+          Las reseñas de Google repiten dos palabras: <em>“clásico”</em> y
+          <em>“tradición”</em>. Y una frase que se repite sola:
+          <strong>los mejores completos de Rancagua</strong>.
+        </p>
+        <p>
+          También aparece algo que no siempre se agradece en voz alta: que la
+          atención es rápida, que nunca falla, y que las señoras que atienden
+          son amables y respetuosas.
+        </p>
+        <a href="#resenas" data-tab="resenas" class="lnk">Ver las reseñas completas →</a>
+      </div>
+    </div>
+
+    <div class="gal reveal">
+      <figure><img src="fotos/mesa-servida.jpg" alt="Mesa servida con churrasco, café y sopaipilla en Río Deva" loading="lazy" decoding="async"></figure>
+      <figure><img src="fotos/chacarero.jpg" alt="Chacarero servido en plato sobre mesa de madera" loading="lazy" decoding="async"></figure>
+      <figure><img src="fotos/italiano.jpg" alt="Sándwich italiano en la vitrina junto a un jugo" loading="lazy" decoding="async"></figure>
+      <figure><img src="fotos/fachada.jpg" alt="La esquina de Brasil en Rancagua donde está Río Deva" loading="lazy" decoding="async"></figure>
+    </div>
+    <p class="note">Todas las fotos son del propio local, publicadas en su ficha de Google Maps.</p>
+  </div>
+</section>
+
+<!-- ══════════════ CARTA ══════════════ -->
+<section class="tab-panel" data-tab-panel="carta" id="carta">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="eyebrow"><span class="rule"></span> Carta</p>
+      <h2>Lo que se come acá</h2>
+      <p class="sec-lead">
+        Los productos de abajo son reales: salen de la ficha del local y de lo
+        que cuentan sus propios clientes.
+      </p>
+    </header>
+
+    <!-- AVISO HONESTO DE PRECIOS — no se inventa ninguno -->
+    <div class="aviso reveal">
+      <strong>Sobre los precios:</strong> Río Deva no tiene todavía una carta
+      publicada con valores, así que en esta demo los productos van sin precio.
+      Google estima un gasto de <b>$5.000 a $10.000 por persona</b>, informado
+      por 23 clientes. Al pedir conviene confirmar en el local.
+    </div>
+
+    <h3 class="cat reveal">Sándwiches</h3>
+    <div class="menu reveal">
+      <article class="menu-item">
+        <img src="fotos/churrasco.jpg" alt="Churrasco italiano en pan frica" loading="lazy" decoding="async">
+        <div><h4>Churrasco Italiano</h4><p>Uno de los tres destacados de la carta en su ficha de Google.</p></div>
+        <span class="price">Consultar</span>
+      </article>
+      <article class="menu-item">
+        <img src="fotos/chacarero.jpg" alt="Chacarero con porotos verdes y tomate" loading="lazy" decoding="async">
+        <div><h4>Chacarero</h4><p>Con porotos verdes y tomate. También destacado en su ficha.</p></div>
+        <span class="price">Consultar</span>
+      </article>
+      <article class="menu-item">
+        <img src="fotos/lomito.jpg" alt="Lomito con huevo y queso fundido" loading="lazy" decoding="async">
+        <div><h4>Lomo Italiano</h4><p>El tercer destacado. “Los mejores lomitos de Rancagua”, según sus reseñas.</p></div>
+        <span class="price">Consultar</span>
+      </article>
+      <article class="menu-item">
+        <div><h4>Sándwich de mechada</h4><p>Aparece en la promoción pintada en el propio mural del local.</p></div>
+        <span class="price">Consultar</span>
+      </article>
+    </div>
+
+    <h3 class="cat reveal">Fuente de soda</h3>
+    <div class="menu reveal">
+      <article class="menu-item">
+        <img src="fotos/hero-completo.jpg" alt="Completo con ketchup y mostaza" loading="lazy" decoding="async">
+        <div><h4>Completos</h4><p>Lo más nombrado en sus reseñas, de lejos.</p></div>
+        <span class="price">Consultar</span>
+      </article>
+      <article class="menu-item">
+        <div><h4>Papas fritas</h4><p>Mencionadas por clientes en sus reseñas.</p></div>
+        <span class="price">Consultar</span>
+      </article>
+      <article class="menu-item">
+        <div><h4>Pizza</h4><p>Mencionada por clientes en sus reseñas.</p></div>
+        <span class="price">Consultar</span>
+      </article>
+    </div>
+
+    <h3 class="cat reveal">Panadería y pastelería</h3>
+    <div class="menu reveal">
+      <article class="menu-item">
+        <div><h4>Panadería</h4><p>Sección propia dentro del local.</p></div>
+        <span class="price">Consultar</span>
+      </article>
+      <article class="menu-item">
+        <div><h4>Pastelería</h4><p>Sección propia dentro del local.</p></div>
+        <span class="price">Consultar</span>
+      </article>
+      <article class="menu-item">
+        <div><h4>Helados</h4><p>Mencionados por clientes en sus reseñas.</p></div>
+        <span class="price">Consultar</span>
+      </article>
+    </div>
+
+    <h3 class="cat reveal">Para tomar</h3>
+    <div class="menu reveal">
+      <article class="menu-item">
+        <div><h4>Café</h4><p>Se sirve en taza, no en vaso de cartón.</p></div>
+        <span class="price">Consultar</span>
+      </article>
+      <article class="menu-item">
+        <img src="fotos/schop.jpg" alt="Schop de cerveza servido en jarro de vidrio" loading="lazy" decoding="async">
+        <div><h4>Schop</h4><p>Servido en jarro de vidrio, como debe ser.</p></div>
+        <span class="price">Consultar</span>
+      </article>
+      <article class="menu-item">
+        <div><h4>Jugos y bebidas</h4><p>Vistos en las fotos del propio local.</p></div>
+        <span class="price">Consultar</span>
+      </article>
+    </div>
+
+    <!--
+      ⚠️ PLACEHOLDER MARCADO — FALTA LA CARTA CON PRECIOS.
+      En la foto `fotos/salon.jpg` hay un cartel de promoción que dice
+      "$11.500 · Para 2 personas", pero el encabezado que explica DE QUÉ es
+      la promoción está cortado por el borde de la foto. Por la regla del
+      proyecto (si no se lee el encabezado, el precio no se publica), ese
+      precio NO está puesto en esta página. Cuando el local facilite su
+      carta real, reemplazar todos los "Consultar" por los valores reales.
+    -->
+  </div>
+</section>
+
+<!-- ══════════════ RESEÑAS ══════════════ -->
+<section class="tab-panel" data-tab-panel="resenas" id="resenas">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="eyebrow"><span class="rule"></span> Reseñas</p>
+      <h2>4,4 ★ · 393 reseñas en Google</h2>
+      <p class="sec-lead">Reseñas reales, copiadas tal cual de su ficha de Google Maps.</p>
+    </header>
+
+    <div class="revs reveal">
+      <blockquote class="rev">
+        <p class="stars" aria-label="5 de 5 estrellas">★★★★★</p>
+        <p>Los completos mas buenos de Rancagua. Clásico.</p>
+        <footer><b>Estefany Valdivia</b><span>Local Guide · 48 reseñas · hace 2 meses</span></footer>
+      </blockquote>
+
+      <blockquote class="rev">
+        <p class="stars" aria-label="5 de 5 estrellas">★★★★★</p>
+        <p>Los mejores lomitos de Rancagua. Un clásico para quienes conocen la ciudad y sus atractivos.</p>
+        <footer><b>Daniel</b><span>Local Guide · 312 reseñas · hace 11 meses</span></footer>
+      </blockquote>
+
+      <blockquote class="rev">
+        <p class="stars" aria-label="5 de 5 estrellas">★★★★★</p>
+        <p>Exquisitos completos, personalmente los considero los mejores de Rancagua, es rápido y nunca falla, las señoras que atienden son muy amables y respetuosas, además encuentras la sección de panadería y pastelería.</p>
+        <footer><b>Daniela Zuñiga</b><span>Local Guide · 22 reseñas</span></footer>
+      </blockquote>
+
+      <blockquote class="rev">
+        <p class="stars" aria-label="5 de 5 estrellas">★★★★★</p>
+        <p>Muy ricos sándwich, una mayonesa casera con una consistencia y sabor espectacular. Muy amable el personal y lugar con buena ambientación.</p>
+        <footer><b>Camilo A.</b><span>Local Guide · 348 reseñas</span></footer>
+      </blockquote>
+    </div>
+
+    <div class="rev-cta reveal">
+      <a class="btn btn-solid" href="https://search.google.com/local/reviews?placeid=ChIJSQKjqBdDY5YRmGjGTnlSAqU" target="_blank" rel="noopener">Leer las 393 reseñas en Google</a>
+      <a class="btn btn-ghost" href="https://search.google.com/local/writereview?placeid=ChIJSQKjqBdDY5YRmGjGTnlSAqU" target="_blank" rel="noopener">Dejar una reseña</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ REDES ══════════════ -->
+<section class="tab-panel" data-tab-panel="redes" id="redes">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="eyebrow"><span class="rule"></span> Redes</p>
+      <h2>Dónde encontrarlos</h2>
+      <p class="sec-lead">
+        Sólo aparece acá lo que se pudo verificar. Nada de perfiles inventados.
+      </p>
+    </header>
+
+    <div class="redes reveal">
+      <a class="red red-tel" href="tel:+56953847770">
+        <span class="red-ico" aria-hidden="true">☎</span>
+        <span class="red-txt"><b>+56 9 5384 7770</b><em>Teléfono publicado en Google Maps</em></span>
+      </a>
+      <a class="red red-map" href="https://www.google.com/maps/search/?api=1&query=R%C3%ADo%20Deva&query_place_id=ChIJSQKjqBdDY5YRmGjGTnlSAqU" target="_blank" rel="noopener">
+        <span class="red-ico" aria-hidden="true">◎</span>
+        <span class="red-txt"><b>Ficha en Google Maps</b><em>4,4 ★ · 393 reseñas</em></span>
+      </a>
+    </div>
+
+    <!--
+      ⚠️ PLACEHOLDER MARCADO — SIN REDES SOCIALES CONFIRMADAS.
+      Búsqueda del 15-09-2026: lo único que aparece es la página de UBICACIÓN
+      de Instagram (instagram.com/explore/locations/177037668/restaurante-rio-deva),
+      que es un geotag donde etiqueta gente de afuera, NO una cuenta del local.
+      Por eso esta pestaña va sin rejilla de Instagram, igual que Café Rex y
+      Café Del Mundo. Falta descartar TikTok y Facebook con búsqueda propia.
+      Si aparece una cuenta real, declarar window.REDES y redes.js la pinta.
+    -->
+    <div class="aviso reveal">
+      <strong>Nota para el local:</strong> no encontramos una cuenta de
+      Instagram, TikTok ni Facebook a nombre de Río Deva. Lo único que existe
+      es la <em>ubicación</em> de Instagram, donde son los clientes los que
+      etiquetan sus fotos. Si ya tienen una cuenta, la sumamos acá; y si no,
+      es probablemente lo primero que conviene abrir.
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ VISÍTANOS ══════════════ -->
+<section class="tab-panel" data-tab-panel="visitanos" id="visitanos">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="eyebrow"><span class="rule"></span> Visítanos</p>
+      <h2>Brasil 1114, Rancagua</h2>
+    </header>
+
+    <div class="visit reveal">
+      <div class="visit-info">
+
+        <div class="vblock">
+          <h3>Dirección</h3>
+          <p>Brasil 1114<br>Rancagua, Región de O'Higgins</p>
+          <p class="sub">Plus Code R6JX+9Q</p>
+        </div>
+
+        <div class="vblock">
+          <h3>Horario</h3>
+          <p class="estado"><span class="dot" aria-hidden="true"></span><span data-horario-estado>Lunes a sábado de 09:00 a 19:30</span></p>
+          <!-- id/atributo que horario.js reconoce, para que REUTILICE esta
+               lista en vez de crear una segunda debajo (ya pasó). -->
+          <ul class="horario horario-semana" id="horario-lista" data-horario-semana>
+            <li data-dia="1"><span>Lunes</span><b>09:00 – 19:30</b></li>
+            <li data-dia="2"><span>Martes</span><b>09:00 – 19:30</b></li>
+            <li data-dia="3"><span>Miércoles</span><b>09:00 – 19:30</b></li>
+            <li data-dia="4"><span>Jueves</span><b>09:00 – 19:30</b></li>
+            <li data-dia="5"><span>Viernes</span><b>09:00 – 19:30</b></li>
+            <li data-dia="6"><span>Sábado</span><b>09:00 – 19:30</b></li>
+            <li data-dia="0"><span>Domingo</span><b class="cerrado">Cerrado</b></li>
+          </ul>
+          <p class="sub">Horario de su ficha de Google Maps, 15-09-2026.</p>
+        </div>
+
+        <div class="vblock">
+          <h3>Teléfono</h3>
+          <p><a href="tel:+56953847770">+56 9 5384 7770</a></p>
+          <!--
+            ⚠️ WhatsApp NO confirmado. Es un número móvil, pero no se
+            comprobó que tenga WhatsApp (wa.me/c/56953847770). Mientras no
+            conste, el botón va como tel: y NO como wa.me. No cambiar sin
+            verificar.
+          -->
+        </div>
+
+        <div class="vblock">
+          <h3>Cómo se puede pedir</h3>
+          <p>Consumo en el lugar · Para llevar · Entrega a domicilio</p>
+          <p class="sub">
+            Servicios declarados en su ficha de Google.
+            <!--
+              ⚠️ FALTA: la ficha confirma "entrega a domicilio" pero NO dice
+              por qué app. No se encontró PedidosYa / Rappi / Uber Eats.
+              No poner ningún botón de delivery hasta confirmarlo.
+            -->
+          </p>
+        </div>
+
+        <div class="vblock">
+          <h3>Gasto por persona</h3>
+          <p>$5.000 – $10.000</p>
+          <p class="sub">Estimación de Google, informada por 23 clientes.</p>
+        </div>
+
+        <div class="vblock vblock-cta">
+          <a class="btn btn-solid" href="https://www.google.com/maps/dir/?api=1&destination=R%C3%ADo%20Deva%20Brasil%201114%20Rancagua&destination_place_id=ChIJSQKjqBdDY5YRmGjGTnlSAqU" target="_blank" rel="noopener">Cómo llegar</a>
+          <a class="btn btn-ghost" href="https://waze.com/ul?ll=-34.1690511,-70.7505037&navigate=yes" target="_blank" rel="noopener">Ir con Waze</a>
+          <a class="btn btn-ghost" href="tel:+56953847770">Llamar</a>
+        </div>
+      </div>
+
+      <div class="visit-map">
+        <!--
+          ⚠️ NO poner loading="lazy" en este iframe. Vive dentro de una
+          pestaña que arranca en display:none, así que el navegador nunca
+          empieza a cargarlo y el mapa queda en blanco aunque después se
+          abra la pestaña. Verificado en vivo el 15-09-2026: sin el lazy
+          carga y muestra el pin real de Río Deva.
+          Embed armado con el CID real 0x96634317a8a30249:0xa50252794ec66898
+          y las coordenadas reales de la ficha, no el iframe genérico.
+        -->
+        <iframe
+          title="Mapa de Río Deva en Brasil 1114, Rancagua"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3300!2d-70.7505037!3d-34.1690511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96634317a8a30249%3A0xa50252794ec66898!2zUsOtbyBEZXZh!5e0!3m2!1ses!2scl!4v1757900000000!5m2!1ses!2scl"
+          width="100%" height="100%" style="border:0" allowfullscreen=""
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ══ Botones flotantes ══ -->
+<div class="float" id="float">
+  <a class="fab fab-tel" href="tel:+56953847770" aria-label="Llamar a Río Deva"><span aria-hidden="true">☎</span></a>
+  <a class="fab fab-map" href="https://www.google.com/maps/dir/?api=1&destination=R%C3%ADo%20Deva%20Brasil%201114%20Rancagua&destination_place_id=ChIJSQKjqBdDY5YRmGjGTnlSAqU" target="_blank" rel="noopener" aria-label="Cómo llegar a Río Deva"><span aria-hidden="true">➤</span></a>
+  <button class="fab fab-top" id="toTop" aria-label="Volver arriba"><span aria-hidden="true">↑</span></button>
+</div>
+
+<!-- ══ Pie ══ -->
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <p class="foot-brand">Río Deva</p>
+      <p>Brasil 1114, Rancagua · O'Higgins</p>
+      <p data-horario-resumen>Lun a Sáb 09:00 – 19:30 · Dom cerrado</p>
+      <p><a href="tel:+56953847770">+56 9 5384 7770</a></p>
+    </div>
+    <div class="foot-demo">
+      <p><strong>Esta es una demo.</strong> No es el sitio oficial de Río Deva.</p>
+      <p>Hecha con datos públicos reales de su ficha de Google Maps
+         (verificados el 15-09-2026) para mostrarle al local cómo se vería
+         su página web.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Horario real declarado para el módulo universal -->
+<script>
+window.HORARIO = {
+  dias: ["09:00 - 19:30","09:00 - 19:30","09:00 - 19:30","09:00 - 19:30",
+         "09:00 - 19:30","09:00 - 19:30","Cerrado"],
+  fuente: "Google Maps, 15-09-2026"
+};
+/* window.REDES NO se declara a propósito: no hay ninguna cuenta verificada.
+   redes.js no hace nada si window.REDES no existe — que es lo correcto acá. */
+</script>
+
+<script src="script.js"></script>
+<script src="vida.js"></script>
+<script src="carta-fotos.js"></script>
+<script src="carrito.js"></script>
+<script src="horario.js"></script>
+<script src="redes.js"></script>
+</body>
+</html>
