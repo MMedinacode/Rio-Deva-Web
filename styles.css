@@ -521,6 +521,9 @@ h1,h2,h3,h4{
   grid-auto-flow:column;align-items:center;font-weight:700;font-size:14.5px;
 }
 .fab-delivery svg{width:21px;height:21px}
+/* El nombre de la plataforma NO puede partirse: en 375px "Uber Eats" caía
+   a dos líneas y deformaba la píldora. */
+.fab-delivery span{white-space:nowrap}
 .fab-rappi{background:#FF441F}
 .fab-pedidosya{background:#FA0050}
 .fab-ubereats{background:#06C167}
@@ -676,7 +679,13 @@ h1,h2,h3,h4{
   .fab svg{width:23px;height:23px}
   /* En el teléfono la etiqueta estorba más de lo que ayuda */
   .fab[data-label]::after{display:none}
-  .fab-delivery{height:48px;padding:0 16px;font-size:13px}
+
+  /* width:auto hay que repetirlo acá: el `.fab{width:48px}` de esta misma
+     media query está MÁS ABAJO en el archivo que el `.fab-delivery{width:auto}`
+     de arriba y, con la misma especificidad (0,1,0), le ganaba. Resultado:
+     la píldora quedaba de 48px y el icono del camión se salía por la
+     izquierda. */
+  .fab-delivery{height:48px;padding:0 16px;font-size:13px;width:auto}
   .carta-bloque{padding:18px 15px}
   .red-card-cta{display:none}
   .redes{grid-template-columns:1fr}
