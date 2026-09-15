@@ -681,3 +681,12 @@ h1,h2,h3,h4{
   .red-card-cta{display:none}
   .redes{grid-template-columns:1fr}
 }
+
+/* ── Parche 15-09-2026: el "+" del carrito en filas de carta ──────────
+   carrito.js distingue dos layouts: tarjeta con foto (el "+" va absoluto
+   en la esquina) y fila simple (lo añade al final de la fila). Pero
+   nuestras .menu-item son grid de 3 columnas, así que en las filas sin
+   foto el "+" caía a una SEGUNDA FILA del grid, torcido y abajo a la
+   izquierda. Se ancla a la esquina igual que en las tarjetas. */
+.menu-item{position:relative}
+.menu-item > .uc-add{position:absolute;top:8px;right:10px;margin:0}
