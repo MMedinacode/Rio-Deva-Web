@@ -690,3 +690,8 @@ h1,h2,h3,h4{
    izquierda. Se ancla a la esquina igual que en las tarjetas. */
 .menu-item{position:relative}
 .menu-item > .uc-add{position:absolute;top:8px;right:10px;margin:0}
+
+/* El "+" quedaba encima de la píldora de precio, que va centrada a la
+   derecha. Se le reserva un poco de alto arriba SOLO a las filas que
+   realmente tienen "+", para que el precio baje y no se pisen. */
+.menu-item:has(> .uc-add){padding-top:26px}
