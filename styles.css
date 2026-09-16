@@ -351,9 +351,12 @@ h1,h2,h3,h4{
   padding:6px 9px;border-radius:7px;font-size:15.5px;
 }
 .horario li span{color:var(--gris)}
-.horario li b{font-weight:500;font-variant-numeric:tabular-nums}
-.horario li.hoy{background:rgba(200,145,47,.14)}
-.horario li.hoy span,.horario li.hoy b{color:var(--caoba);font-weight:700}
+.horario li b{font-weight:500;font-variant-numeric:tabular-nums}/* ⚠️ 16-09-2026 — el día de hoy nunca se destacaba.
+   `horario.js` le pone al <li> de hoy la clase **hs-hoy**, no `hoy`, así
+   que estos estilos no aplicaban en ningún sitio: lo único que se veía
+   era la negrita que el propio módulo inyecta. Se duplica el selector en
+   vez de tocar el módulo, que ya está repartido en 76 proyectos. */
+.horario li.hoy,.horario li.hs-hoy{background:rgba(200,145,47,.14)}.horario li.hoy span,.horario li.hs-hoy span,.horario li.hoy b,.horario li.hs-hoy b{color:var(--caoba);font-weight:700}
 .cerrado{color:var(--rojo) !important}
 
 .visit-map{
