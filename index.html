@@ -24,6 +24,74 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400&family=Public+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Alegreya+Sans+SC:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="pulido.css">
+
+<!-- ══════════════════════════════════════════════════════════════
+     Datos estructurados (schema.org)
+     ══════════════════════════════════════════════════════════════
+     Esto no se ve en la página: lo lee Google. Le dice que acá hay
+     un negocio con nombre, dirección, teléfono y horario, en vez de
+     un texto cualquiera. Es lo que permite salir como ficha y no
+     sólo como un resultado más.
+
+     Todo lo de abajo ya está publicado en esta misma página. Si un
+     dato no estaba, el campo simplemente no aparece. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Río Deva",
+  "description": "Completos, lomitos y churrascos de toda la vida, con panadería y pastelería propia. 4,4 ★ con 393 reseñas.",
+  "image": "https://mmedinacode.github.io/Rio-Deva-Web/fotos/hero-completo.jpg",
+  "url": "https://mmedinacode.github.io/Rio-Deva-Web/",
+  "telephone": "+56953847770",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Brasil 1114",
+    "addressLocality": "Rancagua",
+    "addressRegion": "Región de O'Higgins",
+    "addressCountry": "CL"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Monday",
+      "opens": "09:00",
+      "closes": "19:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Tuesday",
+      "opens": "09:00",
+      "closes": "19:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Wednesday",
+      "opens": "09:00",
+      "closes": "19:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Thursday",
+      "opens": "09:00",
+      "closes": "19:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Friday",
+      "opens": "09:00",
+      "closes": "19:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "19:30"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -129,7 +197,7 @@
       <article class="tri-card">
         <h3>Panadería y pastelería propia</h3>
         <p>Además de la fuente de soda, acá mismo hay sección de panadería y
-           pastelería —como lo cuentan los propios clientes en sus reseñas.</p>
+           pastelería —como lo cuentan los propios clientes en nuestras reseñas.</p>
         <a href="#resenas" data-tab="resenas" class="lnk">Leer reseñas →</a>
       </article>
       <article class="tri-card">
@@ -202,7 +270,7 @@
       <figure><img src="fotos/italiano.jpg" alt="Sándwich italiano en la vitrina junto a un jugo" loading="lazy" decoding="async"></figure>
       <figure><img src="fotos/fachada.jpg" alt="La esquina de Brasil en Rancagua donde está Río Deva" loading="lazy" decoding="async"></figure>
     </div>
-    <p class="note">Todas las fotos son del propio local, publicadas en su ficha de Google Maps.</p>
+    
   </div>
 </section>
 
@@ -220,10 +288,7 @@
 
     <!-- AVISO HONESTO DE PRECIOS — no se inventa ninguno -->
     <div class="aviso reveal">
-      <strong>Sobre los precios:</strong> Río Deva no tiene todavía una carta
-      publicada con valores, así que en esta demo los productos van sin precio.
-      Google estima un gasto de <b>$5.000 a $10.000 por persona</b>, informado
-      por 23 clientes.
+      <strong>Referencia de precio</strong>: entre $5.000 y $10.000 por persona.
     </div>
 
         <section class="carta-bloque reveal">
@@ -235,17 +300,17 @@
     <div class="menu reveal stagger">
       <article class="menu-item">
         <img src="fotos/churrasco.jpg" alt="Churrasco italiano en pan frica" loading="lazy" decoding="async">
-        <div><h4>Churrasco Italiano</h4><p>Uno de los tres destacados de la carta en su ficha de Google.</p></div>
+        <div><h4>Churrasco Italiano</h4><p>Uno de los tres destacados de la carta.</p></div>
         <span class="price">Consultar</span>
       </article>
       <article class="menu-item">
         <img src="fotos/chacarero.jpg" alt="Chacarero con porotos verdes y tomate" loading="lazy" decoding="async">
-        <div><h4>Chacarero</h4><p>Con porotos verdes y tomate. También destacado en su ficha.</p></div>
+        <div><h4>Chacarero</h4><p>Con porotos verdes y tomate.</p></div>
         <span class="price">Consultar</span>
       </article>
       <article class="menu-item">
         <img src="fotos/lomito.jpg" alt="Lomito con huevo y queso fundido" loading="lazy" decoding="async">
-        <div><h4>Lomo Italiano</h4><p>El tercer destacado. “Los mejores lomitos de Rancagua”, según sus reseñas.</p></div>
+        <div><h4>Lomo Italiano</h4><p>“Los mejores lomitos de Rancagua”, dicen nuestras reseñas.</p></div>
         <span class="price">Consultar</span>
       </article>
       <article class="menu-item">
@@ -263,15 +328,15 @@
     <div class="menu reveal stagger">
       <article class="menu-item">
         <img src="fotos/hero-completo.jpg" alt="Completo con ketchup y mostaza" loading="lazy" decoding="async">
-        <div><h4>Completos</h4><p>Lo más nombrado en sus reseñas, de lejos.</p></div>
+        <div><h4>Completos</h4><p>Lo más nombrado en nuestras reseñas, de lejos.</p></div>
         <span class="price">Consultar</span>
       </article>
       <article class="menu-item">
-        <div><h4>Papas fritas</h4><p>Mencionadas por clientes en sus reseñas.</p></div>
+        <div><h4>Papas fritas</h4><p>Mencionadas por clientes en nuestras reseñas.</p></div>
         <span class="price">Consultar</span>
       </article>
       <article class="menu-item">
-        <div><h4>Pizza</h4><p>Mencionada por clientes en sus reseñas.</p></div>
+        <div><h4>Pizza</h4><p>Mencionada por clientes en nuestras reseñas.</p></div>
         <span class="price">Consultar</span>
       </article>
     </div>
@@ -292,7 +357,7 @@
         <span class="price">Consultar</span>
       </article>
       <article class="menu-item">
-        <div><h4>Helados</h4><p>Mencionados por clientes en sus reseñas.</p></div>
+        <div><h4>Helados</h4><p>Mencionados por clientes en nuestras reseñas.</p></div>
         <span class="price">Consultar</span>
       </article>
     </div>
@@ -337,7 +402,7 @@
     <header class="sec-head reveal">
       <p class="eyebrow"><span class="rule"></span> Reseñas</p>
       <h2>4,4 ★ · 393 reseñas en Google</h2>
-      <p class="sec-lead">Reseñas reales, copiadas tal cual de su ficha de Google Maps.</p>
+      <p class="sec-lead">Lo que dicen nuestros clientes en Google.</p>
     </header>
 
     <div class="revs reveal stagger">
@@ -374,9 +439,7 @@
     <header class="sec-head reveal">
       <p class="eyebrow"><span class="rule"></span> Redes</p>
       <h2>Dónde encontrarlos</h2>
-      <p class="sec-lead">
-        Sólo aparece acá lo que se pudo verificar. Nada de perfiles inventados.
-      </p>
+      <p class="sec-lead">Todos nuestros canales, en un solo lugar.</p>
     </header>
 
     <div class="redes">
@@ -385,11 +448,11 @@
           <span class="red-logo red-logo-tel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg></span>
           <span class="red-card-txt">
             <b>+56 9 5384 7770</b>
-            <em>Teléfono publicado en Google Maps</em>
+            <em>Nuestro teléfono</em>
           </span>
           <span class="red-card-cta">Llamar →</span>
         </span>
-        <p class="red-pie">Es el único canal de contacto que tienen publicado.</p>
+        <p class="red-pie">Por acá contestan.</p>
       </a>
 
       <article class="red-card reveal">
@@ -407,7 +470,7 @@
           <figure><img src="fotos/hero-completo.jpg" alt="Completo y café servidos en el mesón" loading="lazy" decoding="async"></figure>
           <figure><img src="fotos/lomito.jpg" alt="Lomito con huevo y queso sobre mantel rojo" loading="lazy" decoding="async"></figure>
         </a>
-        <p class="red-pie">Fotos del local publicadas en su propia ficha.</p>
+        
       </article>
     </div>
 
@@ -420,13 +483,7 @@
       Café Del Mundo. Falta descartar TikTok y Facebook con búsqueda propia.
       Si aparece una cuenta real, declarar window.REDES y redes.js la pinta.
     -->
-    <div class="aviso reveal">
-      <strong>Nota para el local:</strong> no encontramos una cuenta de
-      Instagram, TikTok ni Facebook a nombre de Río Deva. Lo único que existe
-      es la <em>ubicación</em> de Instagram, donde son los clientes los que
-      etiquetan sus fotos. Si ya tienen una cuenta, la sumamos acá; y si no,
-      es probablemente lo primero que conviene abrir.
-    </div>
+    
   </div>
 </section>
 
@@ -461,7 +518,7 @@
             <li data-dia="6"><span>Sábado</span><b>09:00 – 19:30</b></li>
             <li data-dia="0"><span>Domingo</span><b class="cerrado">Cerrado</b></li>
           </ul>
-          <p class="sub">Horario de su ficha de Google Maps, 15-09-2026.</p>
+          
         </div>
 
         <div class="vblock">
@@ -470,7 +527,7 @@
             <span class="vtel-ico" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg></span>
             <span class="vtel-txt">
               <b>+56 9 5384 7770</b>
-              <em>Publicado en su ficha de Google</em>
+              
             </span>
             <span class="vtel-flecha" aria-hidden="true">→</span>
           </a>
@@ -490,7 +547,6 @@
             <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 15a3 3 0 100 6 3 3 0 000-6zM5 15a3 3 0 100 6 3 3 0 000-6zm12.5-9H15V4h4l2 5h1v2h-2.2A5 5 0 0119 21v-2a3 3 0 00.6-5.94L18.4 10H11l-2.2 3H10a5 5 0 11-5 5H3a7 7 0 007-7h.5l3-4h-3V5h5l1 3z"/></svg> Entrega a domicilio</li>
           </ul>
           <p class="sub">
-            Servicios declarados en su ficha de Google.
             <!--
               ⚠️ FALTA: la ficha confirma "entrega a domicilio" pero NO dice
               por qué app. No se encontró PedidosYa / Rappi / Uber Eats.
@@ -576,5 +632,6 @@ window.HORARIO = {
 <script src="horario.js"></script>
 <script src="redes.js"></script>
 <script src="flotantes.js"></script>
+<script src="pulido.js"></script>
 </body>
 </html>

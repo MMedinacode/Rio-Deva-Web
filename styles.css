@@ -707,3 +707,18 @@ h1,h2,h3,h4{
    derecha. Se le reserva un poco de alto arriba SOLO a las filas que
    realmente tienen "+", para que el precio baje y no se pisen. */
 .menu-item:has(> .uc-add){padding-top:26px}
+
+
+/* ══════════════════════════════════════════════════════════════════════
+   Parche 17-09-2026 — el subtítulo del bloque de carta
+   ══════════════════════════════════════════════════════════════════════
+   .carta-bloque-n nació para un número ("13"), donde white-space:nowrap
+   no hacía ninguna diferencia. Cuando ahí empezó a ir un subtítulo
+   largo, nowrap lo obligó a caber en una sola línea y el bloque entero
+   se pasó del ancho de la pantalla: en un móvil de 375px llegó a pedir
+   407px y apareció el scroll horizontal. */
+.carta-bloque-n{ white-space:normal; text-align:right; max-width:100%; }
+@media (max-width:520px){
+  .carta-bloque-head{ flex-direction:column; align-items:flex-start; gap:4px; }
+  .carta-bloque-n{ text-align:left; }
+}
