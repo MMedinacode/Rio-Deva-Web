@@ -722,3 +722,98 @@ h1,h2,h3,h4{
   .carta-bloque-head{ flex-direction:column; align-items:flex-start; gap:4px; }
   .carta-bloque-n{ text-align:left; }
 }
+
+/* El logo real en la cabecera, en lugar de las iniciales "RD". */
+.brand-logo{ width:46px; height:auto; flex:none; display:block;
+  transition:transform .3s var(--fx); }
+.brand:hover .brand-logo{ transform:rotate(-4deg) scale(1.05); }
+
+/* En la pestaña Redes van las TRES redes —Instagram, Facebook y la ficha de
+   Google— y no el teléfono, que no es una red y que además, como cuarta
+   tarjeta, apretaba la fila a 271 px y partía los títulos en tres y cuatro
+   líneas. El teléfono vive en Visítanos y en el botón flotante. */
+
+
+/* ══════════════════════════════════════════════════════════════════════
+   22-09-2026 · el patrón aprobado de tarjetas + los botones de contacto
+   ══════════════════════════════════════════════════════════════════════ */
+
+/* La misma silueta para todas: cabecera, un bloque en 4:3 y una línea de
+   pie. Lo que las empareja no es el ancho, es la silueta. */
+.redes{ align-items:stretch; }
+.redes .red-card{ height:100%; display:flex; flex-direction:column; }
+.red-pie{ margin-top:auto; }
+.redes .red-grid{ aspect-ratio:4/3; min-width:0; }
+.redes .red-grid figure{ height:100%; min-width:0; width:100%; overflow:hidden; margin:0; }
+.redes .red-grid figure img{ width:100%; height:100%; object-fit:cover; display:block;
+  min-width:0; max-width:100%; }
+
+/* Las tarjetas que no tienen fotos propias de esa red muestran el dato
+   grande, en el mismo 4:3 que la rejilla. */
+.red-panel{
+  aspect-ratio:4/3; display:grid; place-content:center; gap:3px; text-align:center;
+  padding:16px;
+  border-top:1px solid var(--c-linea); border-bottom:1px solid var(--c-linea);
+}
+.red-num{ font-family:"Fraunces",serif; font-weight:600; font-size:clamp(30px,3.5vw,42px);
+  line-height:1.05; color:var(--tinta); }
+.red-num-chico{ font-size:clamp(19px,2.2vw,25px); font-variant-numeric:tabular-nums; }
+.red-sub{ font-size:11.5px; letter-spacing:.14em; text-transform:uppercase;
+  font-weight:700; margin-top:5px; }
+.red-nota{ font-size:12.5px; color:var(--gris); margin-top:8px; }
+.red-card:hover .red-panel{ filter:brightness(1.06); }
+
+.red-panel-ig{ background:
+    radial-gradient(120% 100% at 50% 0%, rgba(238,42,123,.15), transparent 70%),
+    linear-gradient(160deg, rgba(249,206,52,.14), rgba(98,40,215,.09)); }
+.red-panel-ig .red-sub{ color:#EE2A7B; }
+
+.red-panel-fb{ background:
+    radial-gradient(120% 100% at 50% 0%, rgba(24,119,242,.16), transparent 70%),
+    linear-gradient(160deg, rgba(24,119,242,.11), rgba(12,93,199,.07)); }
+.red-panel-fb .red-sub{ color:#1877F2; }
+
+.red-panel-wsp{ background:
+    radial-gradient(120% 100% at 50% 0%, rgba(37,211,102,.22), transparent 70%),
+    linear-gradient(160deg, rgba(37,211,102,.14), rgba(18,140,126,.10)); }
+.red-panel-wsp .red-sub{ color:#128C7E; }
+
+.red-panel-tel{ background:
+    radial-gradient(120% 100% at 50% 0%, rgba(0,0,0,.07), transparent 70%),
+    linear-gradient(160deg, rgba(0,0,0,.05), rgba(0,0,0,.02)); }
+.red-panel-tel .red-sub{ color:var(--gris); }
+
+/* Botones de contacto de Visítanos. Un enlace suelto con el dato al lado se
+   ve ordinario; esto es un objetivo del tamaño de un dedo. */
+.cbtn{
+  display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:14px;
+  padding:13px 15px; margin-bottom:9px; text-decoration:none; color:inherit;
+  background:var(--c-bloque); border:1px solid var(--c-linea); border-radius:12px;
+  transition:transform .22s var(--fx), box-shadow .22s var(--fx), border-color .22s var(--fx);
+}
+.cbtn:last-child{ margin-bottom:0; }
+.cbtn:hover{ transform:translateY(-2px); box-shadow:var(--c-sombra-alta); }
+.cbtn:active{ transform:scale(.99); }
+.cbtn-ico{ width:40px; height:40px; border-radius:11px; display:grid; place-content:center;
+  color:#fff; flex:none; }
+.cbtn-ico svg{ width:21px; height:21px; fill:currentColor; display:block; }
+.cbtn-txt{ display:flex; flex-direction:column; line-height:1.25; min-width:0; }
+.cbtn-txt b{ font-size:12px; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--c-suave); font-weight:700; }
+.cbtn-txt em{ font-style:normal; font-size:16.5px; font-weight:600;
+  font-variant-numeric:tabular-nums; overflow:hidden; text-overflow:ellipsis; }
+.cbtn-go{ font-size:19px; color:var(--c-suave); transition:transform .22s var(--fx); }
+.cbtn:hover .cbtn-go{ transform:translateX(3px); }
+.cbtn-wsp .cbtn-ico{ background:#25D366; }
+.cbtn-wsp:hover{ border-color:#25D366; }
+.cbtn-ig .cbtn-ico{ background:linear-gradient(45deg,#F9CE34,#EE2A7B 50%,#6228D7); }
+.cbtn-ig:hover{ border-color:#EE2A7B; }
+.cbtn-fb .cbtn-ico{ background:linear-gradient(135deg,#1877F2,#0C5DC7); }
+.cbtn-fb:hover{ border-color:#1877F2; }
+.cbtn-msg .cbtn-ico{ background:linear-gradient(135deg,#00B2FF,#006AFF); }
+.cbtn-msg:hover{ border-color:#006AFF; }
+.cbtn-tel .cbtn-ico{ background:var(--azul); }
+.cbtn-correo .cbtn-ico{ background:linear-gradient(135deg,#8A8A8A,#5C5C5C); }
+.cbtn-carta .cbtn-ico{ background:linear-gradient(135deg,#C8912F,#8A5E17); }
+
+.fab svg{ width:25px; height:25px; fill:currentColor; display:block; }

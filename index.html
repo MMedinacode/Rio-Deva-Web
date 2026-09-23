@@ -23,8 +23,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400&family=Public+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Alegreya+Sans+SC:wght@500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="pulido.css">
+<link rel="stylesheet" href="styles.css?v=22092026">
+<link rel="stylesheet" href="pulido.css?v=22092026">
 
 <!-- ══════════════════════════════════════════════════════════════
      Datos estructurados (schema.org)
@@ -109,7 +109,12 @@
 <header class="head" id="head">
   <div class="head-in">
     <a class="brand" href="#inicio" data-tab="inicio" aria-label="Río Deva, ir al inicio">
-      <span class="brand-mark" aria-hidden="true">RD</span>
+      <!-- Su logo real, el mismo que usan de foto de perfil en Instagram
+           y en Facebook. Se le sacó el fondo blanco rellenando desde los
+           bordes hacia dentro, y no por luminancia: una clave por brillo
+           se habría comido el blanco de "PIZZERIA" sobre la cinta roja. -->
+      <img class="brand-logo" src="fotos/riodeva-logo.png" alt=""
+           width="360" height="367" decoding="async">
       <span class="brand-txt">
         <strong>Río Deva</strong>
         <em>Fuente de soda · Rancagua</em>
@@ -439,16 +444,44 @@
     </header>
 
     <div class="redes">
-      <a class="red-card reveal" href="tel:+56953847770">
+      <a class="red-card reveal" href="https://www.instagram.com/pizzasriodeva/" target="_blank" rel="noopener">
         <span class="red-card-head">
-          <span class="red-logo red-logo-tel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg></span>
+          <span class="red-logo red-logo-ig"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></span>
           <span class="red-card-txt">
-            <b>+56 9 5384 7770</b>
-            <em>Nuestro teléfono</em>
+            <b>@pizzasriodeva</b>
+            <em>9 publicaciones</em>
           </span>
-          <span class="red-card-cta">Llamar →</span>
+          <span class="red-card-cta">Ver perfil →</span>
         </span>
-        <p class="red-pie">Por acá contestan.</p>
+        <!-- Sin rejilla: las fotos de esta página salen de su ficha de
+             Google, y las fotos de una red tienen que salir de esa red. -->
+        <span class="red-panel red-panel-ig">
+          <span class="red-num">247</span>
+          <span class="red-sub">seguidores</span>
+          <span class="red-nota">Ahí van las promos del día</span>
+        </span>
+        <p class="red-pie">Nuestro Instagram, con lo que sale del mesón.</p>
+      </a>
+
+      <a class="red-card reveal" href="https://www.facebook.com/riodevarancagua/" target="_blank" rel="noopener">
+        <span class="red-card-head">
+          <span class="red-logo red-logo-fb"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21.5v-8h2.7l.4-3.1h-3.1V8.4c0-.9.25-1.5 1.55-1.5h1.65V4.13c-.29-.04-1.27-.13-2.4-.13-2.4 0-4 1.46-4 4.14v2.26H7.6v3.1h2.7v8z"/></svg></span>
+          <span class="red-card-txt">
+            <b>Rio Deva Rancagua</b>
+            <em>71 seguidores</em>
+          </span>
+          <span class="red-card-cta">Ver página →</span>
+        </span>
+        <!-- Va el año y NO la puntuación: su Facebook tiene 1,0 sobre 2
+             votos, contra 4,4 sobre 393 opiniones en Google. Publicar una
+             nota de dos votos sería amplificar ruido. El año sí lo publican
+             ellos mismos en la bio de esa página. -->
+        <span class="red-panel red-panel-fb">
+          <span class="red-num">1949</span>
+          <span class="red-sub">desde ese año</span>
+          <span class="red-nota">Por acá también nos escriben</span>
+        </span>
+        <p class="red-pie">Se puede escribir por Messenger.</p>
       </a>
 
       <article class="red-card reveal">
@@ -466,18 +499,23 @@
           <figure><img src="fotos/hero-completo.jpg" alt="Completo y café servidos en el mesón" loading="lazy" decoding="async"></figure>
           <figure><img src="fotos/lomito.jpg" alt="Lomito con huevo y queso sobre mantel rojo" loading="lazy" decoding="async"></figure>
         </a>
-        
+        <p class="red-pie">4,4 ★ con 393 opiniones, y ahí están las fotos.</p>
       </article>
     </div>
 
     <!--
-      ⚠️ PLACEHOLDER MARCADO — SIN REDES SOCIALES CONFIRMADAS.
-      Búsqueda del 15-09-2026: lo único que aparece es la página de UBICACIÓN
-      de Instagram (instagram.com/explore/locations/177037668/restaurante-rio-deva),
-      que es un geotag donde etiqueta gente de afuera, NO una cuenta del local.
-      Por eso esta pestaña va sin rejilla de Instagram, igual que Café Rex y
-      Café Del Mundo. Falta descartar TikTok y Facebook con búsqueda propia.
-      Si aparece una cuenta real, declarar window.REDES y redes.js la pinta.
+      SUS CANALES, YA CONFIRMADOS (22-09-2026). El comentario anterior decía
+      que no se les encontraba ninguna cuenta y que lo único que aparecía era
+      el geotag de Instagram. Sí tienen cuentas propias:
+      · Instagram @pizzasriodeva — 247 seguidores, 9 publicaciones.
+      · Facebook /riodevarancagua — 71 seguidores, con Messenger.
+      · Google los enlaza a los dos en la sección "Perfiles" de su ficha.
+
+      NO SE ENLAZA, A PROPÓSITO:
+      · www.pizzasriodeva.cl — lo siguen anunciando en su bio de Instagram,
+        pero el dominio ya NO RESUELVE EN DNS. No está caído: no existe.
+      · Su Uber Eats — figura "Cerrado en Uber Eats desde el 10 feb 2021".
+      · La puntuación de su Facebook — 1,0 sobre 2 votos. Ruido.
     -->
     
   </div>
@@ -518,20 +556,36 @@
         </div>
 
         <div class="vblock">
-          <h3>Teléfono</h3>
-          <a class="vtel" href="tel:+56953847770">
-            <span class="vtel-ico" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg></span>
-            <span class="vtel-txt">
-              <b>+56 9 5384 7770</b>
-              
-            </span>
-            <span class="vtel-flecha" aria-hidden="true">→</span>
+          <h3>Contacto</h3>
+          <a class="cbtn cbtn-tel" href="tel:+56953847770">
+            <span class="cbtn-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg></span>
+            <span class="cbtn-txt"><b>Teléfono</b><em>+56 9 5384 7770</em></span>
+            <span class="cbtn-go" aria-hidden="true">→</span>
+          </a>
+          <a class="cbtn cbtn-ig" href="https://www.instagram.com/pizzasriodeva/" target="_blank" rel="noopener">
+            <span class="cbtn-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></span>
+            <span class="cbtn-txt"><b>Instagram</b><em>@pizzasriodeva</em></span>
+            <span class="cbtn-go" aria-hidden="true">→</span>
+          </a>
+          <a class="cbtn cbtn-fb" href="https://www.facebook.com/riodevarancagua/" target="_blank" rel="noopener">
+            <span class="cbtn-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21.5v-8h2.7l.4-3.1h-3.1V8.4c0-.9.25-1.5 1.55-1.5h1.65V4.13c-.29-.04-1.27-.13-2.4-.13-2.4 0-4 1.46-4 4.14v2.26H7.6v3.1h2.7v8z"/></svg></span>
+            <span class="cbtn-txt"><b>Facebook</b><em>Rio Deva Rancagua</em></span>
+            <span class="cbtn-go" aria-hidden="true">→</span>
+          </a>
+          <a class="cbtn cbtn-msg" href="https://m.me/riodevarancagua" target="_blank" rel="noopener">
+            <span class="cbtn-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.36 2 2 6.13 2 11.7c0 2.91 1.19 5.44 3.14 7.19.16.15.26.35.27.57l.05 1.78c.02.57.6.94 1.12.71l1.99-.88c.17-.07.36-.09.54-.04 1.32.36 2.72.48 4.14.31C18.86 20.71 22 16.73 22 11.7 22 6.13 17.64 2 12 2zm6 7.46-2.94 4.66c-.47.74-1.47.93-2.18.4l-2.34-1.75a.6.6 0 00-.72 0l-3.16 2.4c-.42.32-.97-.18-.68-.63l2.94-4.66c.47-.74 1.47-.93 2.18-.4l2.34 1.75a.6.6 0 00.72 0l3.16-2.4c.42-.32.97.18.68.63z"/></svg></span>
+            <span class="cbtn-txt"><b>Messenger</b><em>Escribirnos por Facebook</em></span>
+            <span class="cbtn-go" aria-hidden="true">→</span>
           </a>
           <!--
-            ⚠️ WhatsApp NO confirmado. Es un número móvil, pero no se
-            comprobó que tenga WhatsApp (wa.me/c/56953847770). Mientras no
-            conste, el botón va como tel: y NO como wa.me. No cambiar sin
-            verificar.
+            ⚠️ EL TELÉFONO NO COINCIDE ENTRE SUS CANALES.
+            Google Maps publica +56 9 5384 7770 y su Facebook publica
+            9 5384 7790. Difieren en un dígito. Va el de Google Maps, que es
+            el criterio del proyecto cuando hay dos. Uno de los dos está mal
+            publicado y conviene preguntárselo.
+
+            ⚠️ WhatsApp NO confirmado: es un móvil, pero nadie ha comprobado
+            que tenga WhatsApp. Mientras no conste va tel:, nunca wa.me.
           -->
         </div>
 

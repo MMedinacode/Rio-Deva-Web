@@ -151,3 +151,23 @@ button{ transition: transform .12s var(--pl-fx); }
   font-weight:400; font-size:.82em; opacity:.62; white-space:nowrap;
 }
 @media (max-width:420px){ .hs-especial::after{ content:" · especial"; } }
+
+/* ─── 16. Aire abajo: ninguna pestaña termina pegada al pie ────────────
+   Medido el 22-09-2026 en los 46 sitios del portafolio, pestaña por
+   pestaña, a 390 px de ancho: en 41 de ellos el último elemento (casi
+   siempre una foto) terminaba justo en el borde inferior del panel —hueco
+   de 0 px— y quedaba chocando con el pie.
+
+   Va como ::after y NO como padding-bottom a propósito. El padding
+   sustituye, y al probarlo les quitó a Café del Mundo y a Crema 21 los
+   46 px que ya tenían. Un bloque al final SUMA: el que no tenía nada queda
+   con 30, el que tenía 46 queda con 76, y nadie pierde aire.
+
+   flex-basis y grid-column son por si el panel fuese flex o grid, para que
+   el respiro no se convierta en una columna vacía al costado. */
+.tab-panel.active::after, .tab-panel.on::after, .tab-section.active::after{
+  content:""; display:block;
+  height: var(--pl-aire-abajo, clamp(30px, 4.5vw, 56px));
+  flex-basis:100%; flex-shrink:0; grid-column:1 / -1;
+  pointer-events:none;
+}
